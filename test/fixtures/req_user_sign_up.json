@@ -1,0 +1,6 @@
+{
+    "nome":  "Guil",
+    "email": "guil@gmail.com",
+    "senha":  "strongpass",
+    "telefones": [{"numero": "123-456-7890", "ddd": "33"}]
+}

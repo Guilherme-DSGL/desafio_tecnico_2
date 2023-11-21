@@ -1,18 +1,19 @@
 require('dotenv').config();
-const {serverConfig} = require( './infrastructure/config/server.config');
 const initDataBase = require('./data/database');
-const  server = require('./infrastructure/webserver/server');
-const userRouter = require('./modules/user/routes');
-const userUrls = require('./common/constants/routes');
+const  server = require('./server');
+const userRouter = require('./modules/auth/routes');
+const statusCode = require('./common/constants/statusCode');
 
 
-initDataBase.then(()=> {
-    server.use(userUrls.root, userRouter);
+initDataBase;
 
-    server.listen(serverConfig.PORT, ()=> {
-        console.log('conected');
-        console.log('Server is running on port '+serverConfig.PORT);
-    });
-}).catch((err)=> {
-    console.log(err);
+
+server.use(userRouter());
+server.use((req, res) => {
+    return res.status(statusCode.NOT_FOUND).json({ mensagem: 'Rota nao encontrada' });
+});
+const port = process.env.PORT;
+server.listen(port, ()=> {
+    console.log('conected');
+    console.log('Server is running on port '+port);
 });

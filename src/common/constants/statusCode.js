@@ -1,0 +1,13 @@
+const statusCode = {
+    SUCCESS: 200,
+    RESOURCE_CREATED: 201,
+    BAD_REQUEST: 400,
+    UN_AUTHORIZED: 401,
+    NOT_FOUND: 404,
+    CONFLICT: 409,
+    UNPROCESSABLE_ENTITY: 422,
+    SERVER_ERROR: 500,
+    UNSUSPORTED_MEDIA_TYPE: 415
+};
+
+module.exports = statusCode;
