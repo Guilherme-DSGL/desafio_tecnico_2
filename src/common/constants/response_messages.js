@@ -4,7 +4,8 @@ const responseMessages = {
     unAuthorized: 'Não autorizado',
     invalidSession: 'Sessão inválida', 
     internalError: 'Erro interno',
-    jsonOnly: 'Apenas dados no formato JSON'
+    jsonOnly: 'Apenas dados no formato JSON',
+    notFoundRoute: 'Rota não encontrada'
 };
 
 module.exports = responseMessages;
