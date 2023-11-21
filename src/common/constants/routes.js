@@ -1,8 +1,8 @@
 const  userUrls = {
     root: '/',
-    signIn: '/signin',
-    signUp: '/signup',
-    getUser: '/getuser',
+    signIn: '/sign-in',
+    signUp: '/sign-up',
+    getUser: '/get-user',
 };
   
 
