@@ -12,7 +12,7 @@ As Tecnologias utilizadas foram:
  - Uma outra alternativa é utilizar a hospedagem da Vercel:
    
 ```
-    https://deploy-desafio-1lfusb81p-guilherme-dsgl.vercel.app/
+    https://deploy-desafio-rho.vercel.app/
 ```
    
 ## Requisitos 📦
@@ -38,7 +38,7 @@ Requisições para a API devem seguir os padrões:
 
 | Método | URL |
 |---|---|
-| `POST` | ``` https://user-auth-desafio.onrender.com/sign-up ``` |
+| `POST` | ``` https://auth-user-desafio2.onrender.com/sign-up ``` |
 
 + Requisição (application/json)
 
@@ -85,7 +85,7 @@ Requisições para a API devem seguir os padrões:
 
 | Método | URL |
 |---|---|
-| `POST` | ``` https://user-auth-desafio.onrender.com/sign-in ``` |
+| `POST` | ``` https://auth-user-desafio2.onrender.com/sign-in ``` |
 
 + Requisição (application/json)
 
@@ -125,7 +125,7 @@ Requisições para a API devem seguir os padrões:
 
 | Método | URL |
 |---|---|
-| `GET` | ``` https://user-auth-desafio.onrender.com/user ``` |
+| `GET` | ``` https://auth-user-desafio2.onrender.com/user ``` |
 
 + Requisição
 
