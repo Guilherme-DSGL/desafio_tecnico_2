@@ -2,7 +2,7 @@
 const responseMessages = require('../../../common/constants/response_messages');
 const statusCode = require('../../../common/constants/statusCode');
 const { fetchUserByEmail, createUser, updateLastLogin, fetchUserById, getUserForAuthentication } = require('../repository/user.repository');
-const { sha256Encryption, isEqualEncrypted } = require('../../../infrastructure/encrypt/encrypt');
+const { sha256Encryption } = require('../../../infrastructure/encrypt/encrypt');
 const ServerException = require('../../../infrastructure/exception/server_exception');
 const UserEntity = require('../entity/UserEntity');
 const { createToken } = require('./token.service');
@@ -30,11 +30,8 @@ const registerUser = async (user) => {
 };
 
 const authenticateUser = async (userReq) => {
-    const user = await getUserForAuthentication(userReq.email);
+    const user = await getUserForAuthentication(userReq.email, sha256Encryption(userReq.password));
     if(!user){
-        throw new ServerException(responseMessages.wrongEmailPass, statusCode.UN_AUTHORIZED);
-    }
-    if(!isEqualEncrypted(user.password, userReq.password)) {
         throw new ServerException(responseMessages.wrongEmailPass, statusCode.UN_AUTHORIZED);
     }
     const userUpdated = await updateLastLogin(user.id);
