@@ -27,8 +27,6 @@ As Tecnologias utilizadas foram:
 
 ## Uso da Api
 
-As solicitações devem ser feitas através do protocolo HTTP, para url:
-
 Requisições para a API devem seguir os padrões:
 
 | Método | Descrição |
