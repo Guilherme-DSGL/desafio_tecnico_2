@@ -15,7 +15,7 @@ As Tecnologias utilizadas foram:
   - Persistencia de dados: MongoDB, mongoose.✅
   - Framework: Express.✅
   - Padronização de estilo: EsLint.✅
-  - Task runner para build: Grunt✅
+  - Task runner para build: Grunt + webPack✅
   - Gerenciamento de dependências: Npm.✅
   - Jwt com jsonwebtoken.✅
   - Testes com mocha.✅
