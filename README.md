@@ -9,7 +9,7 @@ As Tecnologias utilizadas foram:
 
 ## Considerações ‼️ 
  - Peço encarecidamente paciência ao realizar a primeira requisição, pois a API está hospeda no [Render](https://render.com/), e o servidor provavelmente estará ocioso o que pode levar ele a demorar para responder.
- - Uma outra alternativa é utilizar a hospedagem da Vercel:
+ - Uma outra alternativa é utilizar a API na hospedagem da Vercel:
    
 ```
     https://deploy-desafio-rho.vercel.app/
