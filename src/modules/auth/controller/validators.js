@@ -9,6 +9,7 @@ const validateSignUpRequest = (body) => {
                 type: 'string',
                 minLength: 5,
                 maxLength: 30,
+                pattern: '^[^\\s].*[^\\s]$'
             },
             email: {
                 type: 'string',
@@ -20,6 +21,7 @@ const validateSignUpRequest = (body) => {
                 type: 'string',
                 minLength: 5,
                 maxLength: 20,
+                pattern: '^[^\\s]+$'
             },
             telefones: {
                 type:'array',
@@ -63,6 +65,7 @@ const validateSignInRequest = (body) => {
                 type: 'string',
                 minLength: 5,
                 maxLength: 20,
+                pattern: '^[^\\s]+$'
             },
         },
         required: ['email', 'senha'],

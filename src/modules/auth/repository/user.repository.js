@@ -13,10 +13,12 @@ const createUser = async (user) => {
     return await UserModel.create(user);
 };
 
-const updateLastLogin = async (id) => {
-    return await UserModel.findByIdAndUpdate(id, {
-        lastLogin: new Date(),
+const updateLastLogin = async (user, date) => {
+    user.lastLogin = date;
+    await UserModel.findByIdAndUpdate(user.id, {
+        lastLogin: user.lastLogin,
     }); 
+    return user;
 };
 
 const fetchUserById = async (id) => {

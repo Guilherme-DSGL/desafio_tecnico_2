@@ -34,9 +34,9 @@ const authenticateUser = async (userReq) => {
     if(!user){
         throw new ServerException(responseMessages.wrongEmailPass, statusCode.UN_AUTHORIZED);
     }
-    const userUpdated = await updateLastLogin(user.id);
+    const userUpdated = await updateLastLogin(user, new Date());
     const userEntity = UserEntity.fromDb(userUpdated);
-    userEntity.token = createToken(user.id);
+    userEntity.token = createToken(userEntity.id);
     return userEntity;
 };
 
