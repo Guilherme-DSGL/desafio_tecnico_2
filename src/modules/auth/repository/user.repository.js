@@ -5,8 +5,8 @@ const fetchUserByEmail = async (email) => {
     return await UserModel.findOne({ email: email }, '-password');
 };
 
-const getUserForAuthentication = async (email) => {
-    return await  UserModel.findOne({ email: email }, );
+const getUserForAuthentication = async (email, password) => {
+    return await  UserModel.findOne({ email: email, password:  password}, );
 };
 
 const createUser = async (user) => {
