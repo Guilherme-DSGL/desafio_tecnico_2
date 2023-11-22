@@ -8,7 +8,7 @@ As Tecnologias utilizadas foram:
 - Express v4.18.2
 
 ## Considerações ‼️ 
- - Peço encarecidamente paciência ao realizar a primeira requisição, pois a API está hospeda no Render, o servidor provavelmente estará ocioso o que pode levar ele a demorar para responder.
+ - Peço encarecidamente paciência ao realizar a primeira requisição, pois a API está hospeda no Render, o servidor provavelmente estará ocioso o que leva ele a demorar para responder.
 
    
 ## Requisitos 📦
